@@ -21,7 +21,7 @@ class GUI(QMainWindow):
         self.showMsg(bytes.decode(str1))
 
     def Connect(self):
-        address = ('192.168.125.118', 12225)
+        address = ('192.168.125.102', 1000)
         global s
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         try:
@@ -52,7 +52,7 @@ class GUI(QMainWindow):
 
 
     def showMsg(self,string):
-        logtime = time.strftime("%Y_%m_%d_%H_%M_%S", time.localtime())
+        logtime = time.strftime("%Y_%m_%d %H:%M:%S", time.localtime())
         self.ui.textEdit.append(str(logtime)+'   '+string)
         # self.ui.textEdit.append(string)
 
