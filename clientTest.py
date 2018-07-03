@@ -2,14 +2,15 @@ import sys
 import socket
 import time
 import struct
-def showMsg(string):
-    logtime = time.strftime("%Y_%m_%d %H:%M:%S", time.localtime())
-    print(logtime +'   '+ string)
-    # self.ui.textEdit.append(string)
+# def showMsg(string):
+#     logtime = time.strftime("%Y_%m_%d %H:%M:%S", time.localtime())
+#     print(logtime +'   '+ string)
+
 
 address = ("192.168.125.102",1000)
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+print(1)
 s.connect(address)
 print("连接成功\n")
 
@@ -23,7 +24,7 @@ try:
     print(data)
 except Exception:
     s.close()
-    showMsg('通讯出错')
+    print('通讯出错')
 s.close()
 
 
