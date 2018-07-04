@@ -2,15 +2,16 @@ import sys
 import socket
 import time
 import struct
-def showMsg(string):
-    logtime = time.strftime("%Y_%m_%d %H:%M:%S", time.localtime())
-    print(logtime +'   '+ string)
-    # self.ui.textEdit.append(string)
+# def showMsg(string):
+#     logtime = time.strftime("%Y_%m_%d %H:%M:%S", time.localtime())
+#     print(logtime +'   '+ string)
+
 
 address = ("192.168.0.9",502)
 address_spin = ("192.168.0.10",2000)
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+print(1)
 s.connect(address)
 # print("连接成功\n")
 
