@@ -7,11 +7,12 @@ def showMsg(string):
     print(logtime +'   '+ string)
     # self.ui.textEdit.append(string)
 
-address = ("192.168.125.102",1000)
+address = ("192.168.0.9",502)
+address_spin = ("192.168.0.10",2000)
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect(address)
-print("连接成功\n")
+# print("连接成功\n")
 
 # data = bytes('', 'UTF-8')
 arr = [0x0f,0x00,0x00,0x00,0x00,0x00,0x00,0x00]
@@ -23,7 +24,7 @@ try:
     print(data)
 except Exception:
     s.close()
-    showMsg('通讯出错')
+    print('通讯出错')
 s.close()
 
 
